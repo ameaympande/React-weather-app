@@ -1,0 +1,28 @@
+* {
+  font-family: "Raleway", sans-serif;
+  z-index: 1;
+}
+
+body {
+  background-image: url("./bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+img {
+  opacity: 0.5;
+}
+
+.heading {
+  margin: 51px 258px;
+  font-size: 28px;
+}
+.container {
+  width: 70vw;
+  height: 80vh;
+  margin: auto;
+  background-color: rgba(207, 10, 10, 0); /* Fully transparent background */
+  backdrop-filter: blur(3px); /* Apply a significant blur effect */
+  border: 1px solid white; /* Add a border for better visibility */
+}

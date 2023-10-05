@@ -1,15 +1,18 @@
-
-import './App.css'
+import { Grid } from "@mui/material";
+import "./app.css";
+import Container from "./components/searchbar/Main";
 
 function App() {
-
   return (
-    <> 
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <>
+      <Grid className="heading" color="white" xs={12} sm={12}>
+        Weather App
+      </Grid>
+      <div className="container">
+        <Container />
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

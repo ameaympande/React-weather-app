@@ -1,0 +1,23 @@
+.container {
+  backdrop-filter: blur(6px); /* Apply a blur effect */
+  border: 1px solid black;
+}
+
+.weather_info {
+  color: white;
+  display: flex;
+  margin-top: 60px;
+  margin-left: 50px;
+}
+.icon-container {
+  text-align: center;
+}
+
+.icon-container svg {
+  display: block;
+  margin: 0 auto;
+}
+
+.otherinfo {
+  color: rgb(243, 191, 191);
+}

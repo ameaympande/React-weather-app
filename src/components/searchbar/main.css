@@ -1,23 +1,41 @@
 .container {
-  backdrop-filter: blur(6px); /* Apply a blur effect */
-  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.weather_info {
-  color: white;
-  display: flex;
-  margin-top: 60px;
+.text-input {
   margin-left: 50px;
+  margin-top: 20px;
+  min-width: 40%;
 }
+
+.search-button {
+  margin-left: 20px;
+  margin-top: 50px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.weather-info {
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
 .icon-container {
   text-align: center;
 }
 
-.icon-container svg {
-  display: block;
-  margin: 0 auto;
+.other-info {
+  margin-top: 20px;
 }
 
-.otherinfo {
-  color: rgb(243, 191, 191);
+.wind-info {
+  text-align: center;
+  margin-top: 20px;
 }

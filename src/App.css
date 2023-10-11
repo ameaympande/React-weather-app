@@ -25,14 +25,24 @@ img {
 }
 
 .heading {
-  margin: 51px 258px;
-  font-size: 28px;
+  font-size: 36px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
+
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+}
+
 .container {
-  width: 70vw;
-  height: 75vh;
-  margin: auto;
-  background-color: rgba(207, 10, 10, 0); /* Fully transparent background */
-  backdrop-filter: blur(3px); /* Apply a significant blur effect */
-  border: 1px solid white; /* Add a border for better visibility */
+  width: 100%;
+  height: auto;
+  background-color: rgba(207, 10, 10, 0);
+  backdrop-filter: blur(3px);
+  border: 1px solid white;
 }

@@ -1,8 +1,14 @@
 import axios from "axios";
 
-const weatherCall = async (city) => {
+const weatherCall = async (location) => {
+  let url = "";
   const apiKey = "WJTBUGMRSMU65YJ8CYVL5NM6J";
-  const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=us&key=${apiKey}`;
+
+  if (location && location.latitude && location.longitude) {
+    url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location.latitude},${location.longitude}?unitGroup=us&key=${apiKey}`;
+  } else {
+    url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=us&key=${apiKey}`;
+  }
 
   try {
     const response = await axios.get(url);
@@ -10,12 +16,11 @@ const weatherCall = async (city) => {
     if (response.status === 200) {
       return response.data;
     } else {
-      showAlert(createError(response.status));
+      throw Error(createError(response.status));
     }
   } catch (error) {
     console.error("An error occurred:", error);
-    showAlert("An unexpected error occurred.");
-    throw error;
+    throw Error("An unexpected error occurred.");
   }
 };
 
@@ -34,10 +39,6 @@ const createError = (statusCode) => {
     default:
       return "An unexpected error occurred.";
   }
-};
-
-const showAlert = (message) => {
-  throw Error(message);
 };
 
 export default weatherCall;
